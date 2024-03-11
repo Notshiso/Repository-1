@@ -3,11 +3,14 @@ st.write ("hello")
 name=st.text_input("Your name")
 st.write("hello "+name)
 genre = st.radio(
-    "What's your favorite movie genre",
-    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
-    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+    "What's your favorite sport",
+    [":rainbow[foot]", "***tennis***", "basket:basketball:"],
+    captions = ["t'aime les pieds chef.", "t'as des bras en béton.", "MON GARSSSSS."])
 
-if genre == ':rainbow[Comedy]':
-    st.write('You selected comedy.')
+if genre == ':rainbow[foot]':
+    st.write('t gay chef.')
+    if:
+    genre == ':***tennis***':
+    st.write("ok pas mal.")
 else:
-    st.write("You didn\'t select comedy.")
+    st.write("wallah jte bz")
