@@ -14,7 +14,7 @@ else:
 
 input="le meilleur brawler"
 list_possibilities=["spike","léon","corbac","edgar"]
-st.write("choisis ."+ input)
+st.write("choisis "+ input)
 for i in range(len(list_posibilities)):
     st.button(list_possibilities[i])
     
