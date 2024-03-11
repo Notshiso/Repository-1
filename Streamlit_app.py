@@ -9,8 +9,5 @@ genre = st.radio(
 
 if genre == ':rainbow[foot]':
     st.write('t gay chef.')
-    if:
-    genre == ':***tennis***':
-    st.write("ok pas mal.")
 else:
     st.write("wallah jte bz")
