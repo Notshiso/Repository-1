@@ -12,9 +12,8 @@ if genre == ':rainbow[foot]':
 else:
     st.write("wallah jte bz.")
 
-input="le meilleur brawler"
-list_possibilities=["spike","léon","corbac","edgar"]
-st.write("choisis "+ input)
+input="le meilleur brawler."
+list_possibilities=["spike","léon","corbac","edgar","surge"]
+st.write("choisis "+input)
 for i in range(len(list_posibilities)):
     st.button(list_possibilities[i])
-    
