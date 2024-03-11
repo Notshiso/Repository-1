@@ -12,6 +12,3 @@ if genre == ':rainbow[foot]':
 else:
     st.write("wallah jte bz.")
 
-input="le meilleur brawler"
-list_possibilities=["spike","léon","corbac","edgar"]
-st.write("choisis ."+ input)
