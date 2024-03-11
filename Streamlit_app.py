@@ -10,7 +10,7 @@ genre = st.radio(
 if genre == ':rainbow[foot]':
     st.write('t gay chef.')
 else:
-    genre== ':basket:basketball:":
+    genre== ':basket:basketball:':
     st.write("wallah jte bz.")
 else:
     st.write("ok pas mal.")
