@@ -1,19 +1,27 @@
-import streamlit as st
-st.write ("hello") 
-name=st.text_input("Your name")
-st.write("hello "+name)
-genre = st.radio(
-    "What's your favorite sport",
-    [":rainbow[foot]", "***tennis***", "basket:basketball:"],
-    captions = ["t'aime les pieds chef.", "t'as des bras en béton.", "MON GARSSSSS."])
+import streamlit as st 
+import pandas as pd
+import numpy as np
+voc = pd.read_csv( https://docs.google.com/spreadsheets/d/e/2PACX-1vSeARXO3MT92XWpg2IwyQOQ8Wi2upeEkqJvNJz5i3bRqHdJIrTchGBBclVu-3Jd1ohYKM4IxecgV64I/pub?output=csv ')
+l = voc.shape[0]
+indices = np.random.choice(l, size=4, replace=False)
+j = np.random.choice(indices)
+word_fr=voc['Définition'].values[j]
+st.write('Traduis: '+word_fr)
 
-if genre == ':rainbow[foot]':
-    st.write('t gay chef.')
-else:
-    st.write("wallah jte bz.")
+def is_correct(i, j):
+  if i==j:
+    st.write("Bien joué !")
+  else:
+    st.write("Perdu !")
 
-input="le meilleur brawler."
-list_possibilities=["spike","léon","corbac","edgar","surge"]
-st.write("choisis "+input)
-for i in range(len(list_posibilities)):
-    st.button(list_possibilities[i])
+col1, col2 = st.columns(2) 
+with col1:
+    for i in range(2):
+        st.button(voc["Hanzi"].values[indices[i]], on_click= is_correct, args=(indices[i],j))
+with col2:
+    for i in range(2,4):
+        st.button(voc["Hanzi"].values[indices[i]], on_click= is_correct, args=(indices[i],j))
+
+
+#st.button("Seconday button")  # st.button default type is secondary
+#st.button("Primary button", type="primary")
