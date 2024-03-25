@@ -1,5 +1,7 @@
-
-
+import streamlit as st 
+import pandas as pd
+import numpy as np
+voc = pd.read_csv( https://docs.google.com/spreadsheets/d/e/2PACX-1vSeARXO3MT92XWpg2IwyQOQ8Wi2upeEkqJvNJz5i3bRqHdJIrTchGBBclVu-3Jd1ohYKM4IxecgV64I/pub?output=csv ')
 l = voc.shape[0]
 if "indices" in st.session_state:
  indices=st.session_state["indices"]
@@ -24,6 +26,9 @@ with col1:
 with col2:
    for i in range(2,4):
        st.button(voc["Hanzi"].values[indices[i]], on_click= is_correct, args=(indices[i],j))
+
+
+
 
 
 #st.button("Seconday button")  # st.button default type is secondary
